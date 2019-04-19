@@ -1,0 +1,12 @@
+
+@font-face{
+    font-family: 'MyFont';
+    src: url('./YuppySC-Regular.otf') format('otf');
+    font-size: 600;
+    font-style: 'MyFont';
+}
+.hello{
+    color:red;
+    font-family: 'MyFont';
+    /* background: url('./hat.png'); */
+}

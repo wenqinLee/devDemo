@@ -1,0 +1,30 @@
+<body>
+    <div class="container">
+        <header>
+            <h1>Todo List</h1>
+
+            <label class="hide-completed">
+                <input type="checkbox" />
+                隐藏所选项
+            </label>
+            {{> loginButtons}}
+            {{#if currentUser}}
+            <form class="new-task">
+                <input type="text" name='text' placeholder="填写增加新的task项目" style="background:#fff" />
+                <button type="submit" class="submit">add</button>
+            </form>
+            {{/if}}
+
+        </header>
+
+        <ul>
+            {{#each tasks}}
+            {{> task }}
+            {{/each}}
+        </ul>
+    </div>
+</body>
+
+<!-- <template name="task">
+    <li>{{text}}{{createAt}} </li>
+  </template> -->
