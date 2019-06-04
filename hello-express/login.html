@@ -1,0 +1,59 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>用户登录</title>
+    <script src="http://code.jquery.com/jquery-2.1.1.min.js">
+        
+    </script>
+</head>
+<body>
+    <div style="height:300px;width:350px;margin:100px auto;margin-left:auto;border:solid 1px;background: rgb(246, 246, 253);">
+        <div style="width:200px;margin:auto;margin-top:50px;">
+        
+    # 用户登录
+            <form id="loginForm"  >
+                <input id="username" type="text" name="username" style="margin: 20px 0px;" />
+                <input id="password" type="password" name="password" />
+                <div style="margin-top:30px;margin-left:125px;">
+                    <input type="submit" value="登 陆" />
+                </div>
+            </form>
+        </div>
+    </div>
+    
+    <script type="text/javascript">
+        $('#loginForm').submit(e=>{
+            const username = e.target.username.value
+            const password = e.target.password.value
+
+
+            var data = {
+                'username':username,
+                'password':password
+            }
+            console.log(data);
+            
+            
+            $.ajax({
+                url:'/login',
+                method:'POST',
+                data:data,
+                success:function(data,status){
+                    if(status === 'success'){
+                        location.href = 'home'
+                    }
+                },
+                error:function(data,status,e){
+                    if(status ==='error'){
+                        location.href = 'login'
+                        alert("请输入正确的账号密码！")
+                    }
+                }
+            })
+        })
+    </script>
+</body>
+</html>
