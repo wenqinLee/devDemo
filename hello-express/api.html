@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="Access-Control-Allow-Origin" content="">
+    <title>api调用页</title>
+    <script src="https://cdn.bootcss.com/jquery/3.4.1/jquery.min.js"></script>
+    <link rel="icon" type="image/x-icon" href="https://ws1.sinaimg.cn/large/006tNc79ly1g3ciyioqv5j302c01y744.jpg">
+</head>
+<body>
+    <h3>api调用页</h3>
+    <div>
+        <input id="courseId" type="text" placeholder="输入课程id">
+        <input type="button" value="查询课程信息" onclick="getCourseInfo()">
+        <input type="button" value="查询最近20门课信息" onclick="get20CourseInfo()">
+    </div> 
+    <div id="api_text"></div>
+    <div id="courses20"></div>
+    <div>
+        <input type="button" value="返回主页" onclick="toIndex()">
+    </div>
+</body>
+<script> 
+    function toIndex(){
+        location.href = '/'
+    }
+    function get20CourseInfo(){
+        $.ajax({
+            url:'https://demo.maodou.io/api/courses',
+            method:'GET',
+            success:function(res){
+                console.log(res.data)
+                var resText =''
+                for(i in res.data){
+                    resText += res.data[i] +'/n'
+                }
+                console.log(resText);
+            }
+        })
+    }
+    function getCourseInfo(){
+        var courseId = document.getElementById('courseId').value
+        $.ajax({
+            url:'https://demo.maodou.io/api/course/'+ courseId,
+            method:'GET',
+            success:function(response){
+                console.log(response.data)
+                var resText = ''
+                for(i in response.data){
+                    resText += i + " : "+ response.data[i] +'\n'
+                    if(typeof response.data[i] === 'object' )
+                    for(j in  response.data[i]){
+                        resText += j + " : "+ response.data[i][j] +'\n'
+                    }
+                }
+                console.log(response.data.liveUrl)
+                document.getElementById('api_text').innerText =  resText
+                console.log('SUCCESS')
+            }
+        })
+    }
+</script>
+</html>

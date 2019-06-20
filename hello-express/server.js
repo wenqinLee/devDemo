@@ -37,6 +37,9 @@ app.get('/home',function(req,res){
 app.get('/form',function(req,res){
     res.render('form')
 })
+app.get('/api',function(req,res){
+    res.render('api')
+})
 
 app.use(bodyParser.json())
 app.use(bodyParser.urlencoded({ extended :true }))
