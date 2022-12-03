@@ -1082,6 +1082,11 @@ acorn-walk@^6.1.1:
   resolved "http://registry.npm.taobao.org/acorn-walk/download/acorn-walk-6.1.1.tgz#d363b66f5fac5f018ff9c3a1e7b6f8e310cc3913"
   integrity sha1-02O2b1+sXwGP+cOh57b44xDMORM=
 
+acorn-walk@^7.1.1:
+  version "7.2.0"
+  resolved "https://registry.yarnpkg.com/acorn-walk/-/acorn-walk-7.2.0.tgz#0de889a601203909b0fbe07b8938dc21d2e967bc"
+  integrity sha512-OPdCF6GsMIP+Az+aWfAAOEt2/+iVDKE7oy6lJ098aoe59oAmK76qV6Gw60SbZ8jHuG2wH058GF4pLFbYamYrVA==
+
 acorn@^3.0.4:
   version "3.3.0"
   resolved "http://registry.npm.taobao.org/acorn/download/acorn-3.3.0.tgz#45e37fb39e8da3f25baee3ff5369e2bb5f22017a"
@@ -1096,6 +1101,11 @@ acorn@^6.0.2, acorn@^6.0.4:
   version "6.0.5"
   resolved "http://registry.npm.taobao.org/acorn/download/acorn-6.0.5.tgz#81730c0815f3f3b34d8efa95cb7430965f4d887a"
   integrity sha1-gXMMCBXz87NNjvqVy3Qwll9NiHo=
+
+acorn@^7.1.1:
+  version "7.4.1"
+  resolved "https://registry.yarnpkg.com/acorn/-/acorn-7.4.1.tgz#feaed255973d2e77555b83dbc08851a6c63520fa"
+  integrity sha512-nQyp0o1/mNdbTO1PO6kHkwSrmgZ0MT/jCCpNiwbUjGoRN4dlBhqJtoQuCnEOKzgTVwg0ZWiCoQy6SxMebQVh8A==
 
 address@^1.0.3:
   version "1.0.3"
@@ -2508,9 +2518,9 @@ decamelize@^2.0.0:
     xregexp "4.0.0"
 
 decode-uri-component@^0.2.0:
-  version "0.2.0"
-  resolved "http://registry.npm.taobao.org/decode-uri-component/download/decode-uri-component-0.2.0.tgz#eb3913333458775cb84cd1a1fae062106bb87545"
-  integrity sha1-6zkTMzRYd1y4TNGh+uBiEGu4dUU=
+  version "0.2.2"
+  resolved "https://registry.yarnpkg.com/decode-uri-component/-/decode-uri-component-0.2.2.tgz#e69dbe25d37941171dd540e024c444cd5188e1e9"
+  integrity sha512-FqUYQ+8o158GyGTrMFJms9qh3CqTKvAqgqsTnkLI8sKu0028orqBhxNMFkFen0zGyg6epACD32pjVk58ngIErQ==
 
 deep-equal@^1.0.1:
   version "1.0.1"
@@ -4708,6 +4718,11 @@ lodash@^4.13.1, lodash@^4.17.10, lodash@^4.17.11, lodash@^4.17.3, lodash@^4.17.4
   version "4.17.11"
   resolved "http://registry.npm.taobao.org/lodash/download/lodash-4.17.11.tgz#b39ea6229ef607ecd89e2c8df12536891cac9b8d"
   integrity sha1-s56mIp72B+zYniyN8SU2iRysm40=
+
+lodash@^4.17.19:
+  version "4.17.21"
+  resolved "https://registry.yarnpkg.com/lodash/-/lodash-4.17.21.tgz#679591c564c3bffaae8454cf0b3df370c3d6911c"
+  integrity sha512-v2kDEe57lecTulaDIuNTPy3Ry4gLGJ6Z1O3vE1krgXZNrsQ+LFTGHVxVjcXPs17LhbZVGedAJv8XZ1tvj5FvSg==
 
 log-symbols@^2.2.0:
   version "2.2.0"
@@ -7670,6 +7685,25 @@ webpack-bundle-analyzer@^3.0.3:
     filesize "^3.6.1"
     gzip-size "^5.0.0"
     lodash "^4.17.10"
+    mkdirp "^0.5.1"
+    opener "^1.5.1"
+    ws "^6.0.0"
+
+webpack-bundle-analyzer@^3.3.2:
+  version "3.9.0"
+  resolved "https://registry.yarnpkg.com/webpack-bundle-analyzer/-/webpack-bundle-analyzer-3.9.0.tgz#f6f94db108fb574e415ad313de41a2707d33ef3c"
+  integrity sha512-Ob8amZfCm3rMB1ScjQVlbYYUEJyEjdEtQ92jqiFUYt5VkEeO2v5UMbv49P/gnmCZm3A6yaFQzCBvpZqN4MUsdA==
+  dependencies:
+    acorn "^7.1.1"
+    acorn-walk "^7.1.1"
+    bfj "^6.1.1"
+    chalk "^2.4.1"
+    commander "^2.18.0"
+    ejs "^2.6.1"
+    express "^4.16.3"
+    filesize "^3.6.1"
+    gzip-size "^5.0.0"
+    lodash "^4.17.19"
     mkdirp "^0.5.1"
     opener "^1.5.1"
     ws "^6.0.0"
